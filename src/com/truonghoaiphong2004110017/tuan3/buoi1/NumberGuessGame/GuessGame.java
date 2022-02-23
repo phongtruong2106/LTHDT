@@ -1,18 +1,18 @@
-package com.truonghoaiphong2004110017.buoi4.numberguessinggame;
+package com.truonghoaiphong2004110017.tuan3.buoi1.NumberGuessGame;
 
 public class GuessGame {
-    //p1
+     //p1
     //p2
     //p3
-    player p1;
-    player p2;
-    player p3;
+   private Player p1;
+   private Player p2;
+   private Player p3;
     //startGame
     public void startGame(){
         //tạo 3 đối tượng , gán 3 biến thực thể
-        p1 = new player();
-        p2 = new player();
-        p3 = new player();
+        p1 = new Player();
+        p2 = new Player();
+        p3 = new Player();
 
         //khai báo 3 biến 
         int guessp1 = 0;
@@ -29,7 +29,6 @@ public class GuessGame {
             System.out.println("Number to guess is " + targetNumber);
 
             //gọi phương thức guess
-        //encap
             p1.guess();
             p2.guess();
             p3.guess();
@@ -52,8 +51,6 @@ public class GuessGame {
                 p3isRight = true;
             }
 
-            //kiểm tra hành vi
-            //p1isRight == true
             //nếu có ít nhất có 1 người đoán đúng(|| là toán tử hoặc)
             if(p1isRight || p2isRight || p3isRight){
                 System.out.println("chúng ta có một người chiến thắng!");
