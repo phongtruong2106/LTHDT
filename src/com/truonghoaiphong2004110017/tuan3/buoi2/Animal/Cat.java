@@ -10,4 +10,9 @@ public class Cat extends Animal{
     public void chaseButerfly(){
         System.out.println("chasing........");
     }
+
+    public void eat(){
+        System.out.println("cat eating fish..");
+    }
+    
 }

@@ -8,7 +8,6 @@ public class Animal {
 
 protected void makeNoise(){
    
-    
 }
 
 protected void eat(){
