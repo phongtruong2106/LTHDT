@@ -1,6 +1,6 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.Animal;
 
-public class Cat extends Animal{
+public class Cat extends Feline{
     @Override
     protected void makeNoise(){
         System.out.println("cat sound.....");

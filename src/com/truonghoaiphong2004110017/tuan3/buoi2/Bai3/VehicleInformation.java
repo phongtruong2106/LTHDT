@@ -61,6 +61,8 @@ public class VehicleInformation {
         return thueXe;
     }
     
-
+    public void print(){
+        System.out.printf("%5d %-20s %5d %10.2f %10s %8.5f \n ", tenChuXe , loaiXe,dungTich, gia, thueXe() );
+    }
     
 }

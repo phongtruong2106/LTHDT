@@ -1,6 +1,6 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.Animal;
 
-public class Tiger extends Canine {
+public class Tiger extends Feline {
     @Override 
     protected void eat(){
         System.out.println("Tiger eating meat");

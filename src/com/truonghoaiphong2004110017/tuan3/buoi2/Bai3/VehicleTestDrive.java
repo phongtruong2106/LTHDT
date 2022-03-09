@@ -8,5 +8,6 @@ public class VehicleTestDrive {
   static void input(VehicleInformation x){
       System.out.println("nhập mã xe: ");
       
+      
   }
 }
