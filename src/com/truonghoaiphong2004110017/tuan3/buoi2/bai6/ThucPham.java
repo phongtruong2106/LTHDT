@@ -1,68 +1,108 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.bai6;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-
 public class ThucPham {
-    private int id;
+    private String id;
     private String name;
     private double donGia;
     private Date nSX, nHH;
 
-    //khởi tạo constructor mặc định
-    public ThucPham(){
-    }
-
-    //khởi tạo constructor có tham số
-    public ThucPham(int id, String name, double donGia, Date nSX, Date nHH){
-        this.id = id;
-        this.name = name;
-        this.donGia = donGia;
-        this.nSX =nSX;
-        this.nHH = nHH;
+  //khởi tạo constructor
+    public ThucPham(String id){
+        this.setMaHang(id);
     }
 
     //set and get
-    public void setMaHang(int id){
-        this.id = id;
+    private void setMaHang(String id){
+        if (id != null){
+             this.id = id;
+        } else {
+            System.out.println("không được để rỗng");
+        }
+       
     }
-    public int getMaHang(){
+    public String getMaHang(){
         return this.id;
     }
 
     public void setTenHang(String name){
-        this.name = name;
+        if( name != null){
+            this.name = name;
+        } else {
+            System.out.println("không được để rỗng");
+        }
+        
     }
     public String getTenHang(){
+        
         return this.name;
     }
 
     public void setDonGia(double donGia){
-        this.donGia = donGia;
+        if(donGia > 0){
+            this.donGia = donGia;
+        } else {
+            System.out.println("không hợp lệ");
+        }
+        
     }
     public double getDonGia(){
         return this.donGia;
     }
 
     public void setNSX(Date nSX){
-        this.nSX = nSX;
+        if(nSX != null){
+            this.nSX = nSX;
+        } else {
+            System.out.println("không được để rỗng!!");
+        }
+        
     }
     public Date getNSX(){
         return this.nSX;
     }
 
     public void setNHH(Date nHH){
-        this.nHH = nHH;
+        if(nHH.after(nSX)){
+             this.nHH = nHH;
+        } else {
+            System.out.println("ngày hết hạn phải sau ngày sản xuất!1");
+        }
+       
     }
 
     public Date getNHH(){
         return this.nHH;
     }
 
-/*//khởi tạo phương thức toString
-    public String toString(){
-        //sử dụng phương thức locale để biến đổi theo tiền tệ việt
-        Locale lcVN = new Locale("vi", "VN");
-        
-    } */
+    @Override
+    public String toString() {
+        //dd//MM/yyyy
+        SimpleDateFormat ngayVn = new SimpleDateFormat("dd/mm/yyyy");
+
+        //n
+
+        return "ThucPham [donGia=" + donGia + ", id=" + id + ", nHH=" + ngayVn.format(nHH) + ", nSX=" + ngayVn.format(nSX) + ", name=" + name + "]";
+    }
+
+    public ThucPham(String id, String name, double donGia, Date nSX, Date nHH) {
+        this.setMaHang(id);
+        this.name = name;
+        this.donGia = donGia;
+        this.nSX = nSX;
+        this.setNHH(nHH);
+    }
+
+    public boolean kiemTraHSD(){
+        boolean isHetHan = false;
+        Date ngayHienTai = new Date();
+        if(nHH.before(ngayHienTai)){
+            isHetHan = true;
+        }
+        return isHetHan;
+    }
+
+    
+
 }
