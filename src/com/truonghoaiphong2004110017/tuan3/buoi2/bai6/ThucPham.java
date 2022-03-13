@@ -64,11 +64,16 @@ public class ThucPham {
     }
 
     public void setNHH(Date nHH){
-        if(nHH.after(nSX)){
+        if(nHH != null){
+             if(nHH.after(nSX)){
              this.nHH = nHH;
         } else {
             System.out.println("ngày hết hạn phải sau ngày sản xuất!1");
         }
+        } else {
+            System.out.println("không được để rỗng!!");
+        }
+       
        
     }
 
