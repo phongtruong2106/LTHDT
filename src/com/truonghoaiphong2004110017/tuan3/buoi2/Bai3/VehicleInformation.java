@@ -1,5 +1,7 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.Bai3;
 
+import java.util.Scanner;
+
 public class VehicleInformation {
     private String tenChuXe;
     private String loaiXe;
@@ -60,7 +62,20 @@ public class VehicleInformation {
         thueXe = gia * 5 / 100;
         return thueXe;
     }
-    
+    Scanner sc = new Scanner(System.in);
+    public void input(){
+        System.out.println("nhập tên chủ xe: ");
+        tenChuXe = sc.nextLine();
+        System.out.println("nhập loại xe: ");
+        loaiXe = sc.nextLine();
+        System.out.println("nhập dung tích xe; ");
+        dungTich =sc.nextInt();
+        sc.nextLine();
+        System.out.println("nhập giá: ");
+        gia = sc.nextDouble();
+        sc.nextLine();
+    }
+
     public void print(){
         System.out.printf("%5d %-20s %5d %10.2f %10s %8.5f \n ", tenChuXe , loaiXe,dungTich, gia, thueXe() );
     }
