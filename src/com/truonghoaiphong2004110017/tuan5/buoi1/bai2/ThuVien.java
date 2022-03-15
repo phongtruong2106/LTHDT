@@ -71,7 +71,7 @@ public class ThuVien {
         unitPrice = sc.nextDouble();
         System.out.println("input amount: ");
         amount = sc.nextInt();
-        System.out.println("input Publishing House: ");
+        System.out.println("input Publishing House : ");
         publishingHouse = sc.nextLine();     
     }
 

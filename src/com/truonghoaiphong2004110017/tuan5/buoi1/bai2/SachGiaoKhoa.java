@@ -39,7 +39,7 @@ public class SachGiaoKhoa extends ThuVien {
                 status = "New Book";
                 break;
             default:
-                System.out.println("error! again");
+                System.out.println("error! again ");
         }
         return status;
     }

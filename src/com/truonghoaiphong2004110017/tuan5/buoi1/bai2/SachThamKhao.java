@@ -1,7 +1,7 @@
 package com.truonghoaiphong2004110017.tuan5.buoi1.bai2;
 
 public class SachThamKhao extends ThuVien{
-    private double thanhTien, thue, TBC;
+    private double thanhTien, thue;
 
      
     public SachThamKhao(){

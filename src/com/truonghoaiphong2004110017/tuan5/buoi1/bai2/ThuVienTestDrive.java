@@ -8,6 +8,6 @@ public class ThuVienTestDrive {
 
         ThuVien thuVien = new SachThamKhao();
         thuVien.input();
-        System.out.println(thuVien.toString());
+        System.out.println(thuVien.toString());;
     }
 }
