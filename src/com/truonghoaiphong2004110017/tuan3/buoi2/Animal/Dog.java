@@ -1,6 +1,6 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.Animal;
 
-public class Dog extends Canine {
+public abstract class Dog extends Canine {
     @Override 
     protected void makeNoise(){
         System.out.println("dog sound...");
