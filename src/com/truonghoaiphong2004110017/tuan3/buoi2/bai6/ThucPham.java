@@ -1,8 +1,9 @@
 package com.truonghoaiphong2004110017.tuan3.buoi2.bai6;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class ThucPham {
+public class ThucPham implements Serializable{
     private String id;
     private String name;
     private double donGia;
