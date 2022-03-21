@@ -9,7 +9,7 @@ public abstract class Animal {
     Scanner sc= new Scanner(System.in);
     
 
-protected abstract void makeNoise();
+public abstract void makeNoise();
 protected abstract void eat();
 
 protected void sleep(){

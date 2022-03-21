@@ -2,7 +2,7 @@ package com.truonghoaiphong2004110017.tuan5.buoi1;
 
 public class Dog extends Canine implements Pet, itnName{
     @Override 
-    protected void makeNoise(){
+   public void makeNoise(){
         System.out.println("dog sound...");
     }
 

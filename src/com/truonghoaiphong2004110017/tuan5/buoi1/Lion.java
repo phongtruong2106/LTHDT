@@ -6,7 +6,7 @@ public class Lion extends Feline {
          System.out.println("lion eating meat");
     }
     @Override
-    protected void makeNoise(){
+    public void makeNoise(){
         System.out.println("lion sound......");
     }
 }

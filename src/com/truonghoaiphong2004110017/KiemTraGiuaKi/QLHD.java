@@ -2,7 +2,7 @@ package com.truonghoaiphong2004110017.KiemTraGiuaKi;
 
 import java.util.Scanner;
 
-import com.truonghoaiphong2004110017.tuan5.buoi1.bai4.KhachHang;
+
 
 public class QLHD {
     public static void main(String[] args) {
