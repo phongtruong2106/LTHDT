@@ -12,7 +12,6 @@ public abstract class HoaDon {
     private String tenKhachHang;
     private int maPhong;
     private double donGia;
-    protected double thanhTien;
     SimpleDateFormat ngayVN = new SimpleDateFormat("dd/MM/yyyy");
     Scanner sc =new Scanner(System.in);
     Scanner scs = new Scanner(System.in);
@@ -20,21 +19,18 @@ public abstract class HoaDon {
 
     }
 
-    protected HoaDon(String maHoaDon, Date ngayHoaDon, String tenKhachHang,int maPhong, double donGia, double thanhTien){
+    protected HoaDon(String maHoaDon, Date ngayHoaDon, String tenKhachHang,int maPhong, double donGia){
         this.maHoaDon = maHoaDon;
         this.ngayHoaDon = ngayHoaDon;
         this.tenKhachHang = tenKhachHang;
         this.maPhong = maPhong;
         this.donGia = donGia;
-        this.thanhTien = thanhTien;
     }
 
     public String getMaHoaDon() {
         return maHoaDon;
     }
-    public void setMaHoaDon(String maHoaDon) {
-        this.maHoaDon = maHoaDon;
-    }
+    
     public Date getNgayHoaDon() {
         return ngayHoaDon;
     }

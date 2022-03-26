@@ -11,7 +11,7 @@ public class HoaDonTheoGio extends HoaDon{
     }
 
     public HoaDonTheoGio(String maHoaDon, Date ngayHoaDon, String tenKhachHang,int maPhong, double donGia, double thanhTien, double soGioThue){
-        super(maHoaDon, ngayHoaDon, tenKhachHang, maPhong, donGia, thanhTien);
+        super(maHoaDon, ngayHoaDon, tenKhachHang, maPhong, donGia);
         this.soGioThue = soGioThue;
     }
 
@@ -25,32 +25,24 @@ public class HoaDonTheoGio extends HoaDon{
 
     @Override
     protected double thanhTien() {
+        double tien = 0;
         if(this.soGioThue <= 24){
-            this.thanhTien = soGioThue * getDonGia();
+            tien = soGioThue * getDonGia();
         }
-        if(this.thanhTien > 24 && this.thanhTien < 30){
-           this.thanhTien = getDonGia()*24;
+        if(this.soGioThue > 24 && this.soGioThue < 30){
+           tien = getDonGia()*24;
         }
-        if(this.thanhTien >30 ){
+        if(this.soGioThue >30 ){
             System.out.println("hóa đơn này không dc tính theo giờ");
         }
-        return thanhTien;
+        return tien;
 
     }
     
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "hoa don theo gio" + super.toString() + ", so gio thue: "  +soGioThue + ", thanh tien: " + thanhTien;
+        return "hoa don theo gio" + super.toString() + ", so gio thue: "  +soGioThue ;
     }
-
-    @Override
-    public void input() {
-        // TODO Auto-generated method stub
-        super.input();
-        System.out.println("nhập số giờ thuê: ");
-        this.soGioThue = sc.nextDouble();
-    }
-
     
 }

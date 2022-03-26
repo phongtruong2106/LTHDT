@@ -3,15 +3,15 @@ package com.truonghoaiphong2004110017.tuan6.buoi1.HoaDonKhachSan;
 import java.util.Date;
 
 public class HoaDonTheoNgay extends HoaDon {
-    private float soNgayThue;
+    private int soNgayThue;
 
     public HoaDonTheoNgay(){
         super();
         this.soNgayThue = 0;
     }
 
-    public HoaDonTheoNgay(String maHoaDon, Date ngayHoaDon, String tenKhachHang, int maPhong, double donGia, double thanhTien, float soNgayThue){
-        super(maHoaDon, ngayHoaDon, tenKhachHang, maPhong, donGia, thanhTien);
+    public HoaDonTheoNgay(String maHoaDon, Date ngayHoaDon, String tenKhachHang, int maPhong, double donGia, double thanhTien, int soNgayThue){
+        super(maHoaDon, ngayHoaDon, tenKhachHang, maPhong, donGia);
         this.soNgayThue = soNgayThue;
     }
 
@@ -19,32 +19,24 @@ public class HoaDonTheoNgay extends HoaDon {
         return soNgayThue;
     }
 
-    public void setSoNgayThue(float soNgayThue) {
+    public void setSoNgayThue(int soNgayThue) {
         this.soNgayThue = soNgayThue;
     }
 
     @Override
     protected double thanhTien() {
+        double tien = 0;
         if(this.soNgayThue > 7){
-            this.thanhTien = soNgayThue * ((getDonGia() * 20) / 100);
+            tien = 7 * this.getDonGia() + (this.getDonGia() - 7) * 0.8;
         } else {
-            this.thanhTien = soNgayThue*getDonGia();
+            tien = soNgayThue*getDonGia();
         }
 
-        return thanhTien;
+        return tien;
     }
-
-    @Override
-    public void input() {
-        // TODO Auto-generated method stub
-        super.input();
-        System.out.println("nhập só ngày thuê; ");
-        this.soNgayThue = sc.nextFloat();
-    }
-
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Hoa don theo ngay" +  super.toString() + ", so ngay thue: " + soNgayThue + ", thanh tien: " + thanhTien;
+        return "Hoa don theo ngay" +  super.toString() + ", so ngay thue: " + soNgayThue;
     }
 }
